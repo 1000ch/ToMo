@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>ToMo 指数</title>
+    <link rel="stylesheet" href="https://1000ch.github.io/gh-pages.css/gh-pages.css">
+    <link rel="stylesheet" href="./app.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body class="container">
+    <header>
+      <h1>ToMo (Total Motivation) index</h1>
+      <p>現在の職に就いている理由を選択してください。</p>
+      <ol>
+        <li>全く当てはまらない</li>
+        <li>当てはまらない</li>
+        <li>あまり当てはまらない</li>
+        <li>どちらでもない</li>
+        <li>やや当てはまる</li>
+        <li>当てはまる</li>
+        <li>とても当てはまる</li>
+      </ol>
+    </header>
+    <main>
+      <section>
+        <section>
+          <h2>楽しさ</h2>
+          <p>仕事そのものが楽しい</p>
+          <div class="answer-range">
+            <datalist id="list-a">
+              <option value="1" label="1">1</option>
+              <option value="2" label="2">2</option>
+              <option value="3" label="3">3</option>
+              <option value="4" label="4">4</option>
+              <option value="5" label="5">5</option>
+              <option value="6" label="6">6</option>
+              <option value="7" label="7">7</option>
+            </datalist>
+            <input type="range" min="1" max="7" step="1" id="fun" list="list-a">
+          </div>
+        </section>
+        <section>
+          <h2>目的</h2>
+          <p>取り組む仕事の社会への影響など、一次的な成果が重要である</p>
+          <div class="answer-range">
+            <datalist id="list-b">
+              <option value="1" label="1">1</option>
+              <option value="2" label="2">2</option>
+              <option value="3" label="3">3</option>
+              <option value="4" label="4">4</option>
+              <option value="5" label="5">5</option>
+              <option value="6" label="6">6</option>
+              <option value="7" label="7">7</option>
+            </datalist>
+            <input type="range" min="1" max="7" step="1" id="purpose" list="list-b">
+          </div>
+        </section>
+        <section>
+          <h2>可能性</h2>
+          <p>夢に繋がる能力が磨かれるなど、二次的な成果が重要である</p>
+          <div class="answer-range">
+            <datalist id="list-c">
+              <option value="1" label="1">1</option>
+              <option value="2" label="2">2</option>
+              <option value="3" label="3">3</option>
+              <option value="4" label="4">4</option>
+              <option value="5" label="5">5</option>
+              <option value="6" label="6">6</option>
+              <option value="7" label="7">7</option>
+            </datalist>
+            <input type="range" min="1" max="7" step="1" id="possibility" list="list-c">
+          </div>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>感情的圧力</h2>
+          <p>顧客や同僚など、気にかけてくれる人を落胆させたくない</p>
+          <div class="answer-range">
+            <datalist id="list-d">
+              <option value="1" label="1">1</option>
+              <option value="2" label="2">2</option>
+              <option value="3" label="3">3</option>
+              <option value="4" label="4">4</option>
+              <option value="5" label="5">5</option>
+              <option value="6" label="6">6</option>
+              <option value="7" label="7">7</option>
+            </datalist>
+            <input type="range" min="1" max="7" step="1" id="emotional-pressure" list="list-d">
+          </div>
+        </section>
+        <section>
+          <h2>経済的圧力</h2>
+          <p>この仕事を失うと、金銭的に望む生活を維持できない</p>
+          <div class="answer-range">
+            <datalist id="list-e">
+              <option value="1" label="1">1</option>
+              <option value="2" label="2">2</option>
+              <option value="3" label="3">3</option>
+              <option value="4" label="4">4</option>
+              <option value="5" label="5">5</option>
+              <option value="6" label="6">6</option>
+              <option value="7" label="7">7</option>
+            </datalist>
+            <input type="range" min="1" max="7" step="1" id="financial-pressure" list="list-e">
+          </div>
+        </section>
+        <section>
+          <h2>惰性</h2>
+          <p>特に理由もなく、この仕事を惰性で続けている</p>
+          <div class="answer-range">
+            <datalist id="list-f">
+              <option value="1" label="1">1</option>
+              <option value="2" label="2">2</option>
+              <option value="3" label="3">3</option>
+              <option value="4" label="4">4</option>
+              <option value="5" label="5">5</option>
+              <option value="6" label="6">6</option>
+              <option value="7" label="7">7</option>
+            </datalist>
+            <input type="range" min="1" max="7" step="1" id="inertia" list="list-f">
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <h2>結果</h2>
+      <p>あなたの ToMo 指数は <strong id="score"></strong> です。<button id="share">この結果を共有する</button></p>
+    </footer>
+  </body>
+</html>

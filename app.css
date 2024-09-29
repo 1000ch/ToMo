@@ -1,0 +1,32 @@
+.answer-range {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer-range datalist {
+  display: flex;
+  justify-content: space-between;
+}
+
+.answer-range datalist option:first-child {
+  margin-left: 3px;
+}
+
+.answer-range datalist option:last-child {
+  margin-right: 3px;
+}
+
+main {
+  display: flex;
+  gap: 2em;
+
+  > section {
+    width: 50%;
+  }
+}
+
+@media (width <= 600px) {
+  main {
+    gap: 1em;
+  }
+}
